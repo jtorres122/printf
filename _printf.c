@@ -19,23 +19,26 @@ int _printf(const char *format, ...)
 
 	for (idx = 0 ; format[idx] != '\0' ; idx++)
 	{
-		if (format[idx] == '%')
+		if (format[idx] == '%' && format[idx + 1] != '%')
 		{
 			if (format[idx + 1] != 's' && format[idx + 1] != 'c')
 			{
-				_putchar(format[idx + 1]);
+				_putchar(format[idx]);
 				counter++;
 			}
 			else
 			{
 				counter += modifiers(format[idx + 1], list);
+				idx++;
 			}
-			idx++;
 		}
 		else
 		{
-			_putchar(format[idx]);
-			counter++;
+			if (format[idx + 1] != '%')
+			{
+				_putchar(format[idx]);
+				counter++;
+			}
 		}
 	}
 
