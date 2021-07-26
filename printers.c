@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * mf - function
+ * modifiers - function
  * @modifier: parameter
  * @list: parameter
  * Return: 0
@@ -27,6 +27,9 @@ int modifiers(char modifier, va_list list)
 int sprinter(char *str)
 {
 	int idx;
+
+	if (str == NULL)
+		str = "(null)";
 
 	for (idx = 0 ; str[idx] != '\0' ; idx++)
 		_putchar(str[idx]);
