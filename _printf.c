@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				counter += modifier(format[idx + 1], list);
+				counter += modifiers(format[idx + 1], list);
 			}
 			idx++;
 		}
