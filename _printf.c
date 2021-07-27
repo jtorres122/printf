@@ -34,11 +34,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[idx + 1] != '%')
-			{
-				_putchar(format[idx]);
-				counter++;
-			}
+			_putchar(format[idx]);
+			counter++;
 		}
 	}
 
