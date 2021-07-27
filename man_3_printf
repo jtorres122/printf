@@ -1,0 +1,32 @@
+\" Manpage for _Printf
+
+.TH _PRINTF 1 "27 July 2021" "1.0" "Man Page _printf"
+
+.SH NAME
+_printf \- format and print inputed data.
+
+.SH SYNOPSIS
+int _printf(const char *format,...)
+
+.SH DESCRIPTION
+_printf is a low level version of printf.
+
+Format modifiers:
+
+	* %c	Characters
+
+	* %s	Strings
+
+	* %i	Integers
+
+	* %d	Integers
+
+All in C format specifications. Function accepts the above format modifiers and prints them according to their data type inputs.
+
+NOTE: Your shell may not have its own version of _printf. Function in progress.
+
+.SH AUTHORS
+Written by Jose Torres and Vanessa Loiz.
+
+.SH SEE ALSO
+man printf(1)
