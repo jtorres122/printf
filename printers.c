@@ -34,7 +34,7 @@ int sprinter(char *str)
 	for (idx = 0 ; str[idx] != '\0' ; idx++)
 		_putchar(str[idx]);
 
-	return (idx - 1);
+	return (idx);
 }
 
 /**

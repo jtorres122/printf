@@ -26,7 +26,6 @@ int _printf(const char *format, ...)
 			idx++;
 			continue;
 		}
-
 		if (format[idx] == '%' && format[idx + 1] != '%')
 		{
 			if (format[idx + 1] != 's' && format[idx + 1] != 'c')
@@ -46,8 +45,6 @@ int _printf(const char *format, ...)
 			counter++;
 		}
 	}
-
 	va_end(list);
-
 	return (counter);
 }
