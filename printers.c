@@ -55,6 +55,7 @@ int cprinter(char c)
 /**
  * int_printer - function
  * @i: parameter
+ * @counter: parameter keeps count of integers printed
  * Return: 0
  */
 int int_printer(int i, int counter)
