@@ -19,6 +19,14 @@ int _printf(const char *format, ...)
 
 	for (idx = 0 ; format[idx] != '\0' ; idx++)
 	{
+		if (format[idx] == '%' && format[idx + 1] == '%')
+		{
+			_putchar(format[idx]);
+			counter++;
+			idx++;
+			continue;
+		}
+
 		if (format[idx] == '%' && format[idx + 1] != '%')
 		{
 			if (format[idx + 1] != 's' && format[idx + 1] != 'c')
