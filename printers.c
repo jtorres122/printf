@@ -59,19 +59,24 @@ int cprinter(char c)
  */
 int int_printer(int i)
 {
+	unsigned int n = 0;
 	int counter = 0;
 
 	if (i < 0)
 	{
 		_putchar('-');
-		i = -i;
+		n = (i * -1);
 		counter++;
 	}
+	else
+	{
+		n = i;
+	}
 
-	if (i / 10 != 0)
-		int_printer(i / 10);
+	if (n / 10 != 0)
+		int_printer(n / 10);
 
-	_putchar(i % 10 + '0');
+	_putchar(n % 10 + '0');
 	counter++;
 
 	return (counter);
