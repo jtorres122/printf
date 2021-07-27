@@ -1,4 +1,5 @@
 #include "holberton.h"
+int _printf(const char *format, ...);
 
 /**
  * _printf - function
@@ -28,7 +29,8 @@ int _printf(const char *format, ...)
 		}
 		if (format[idx] == '%' && format[idx + 1] != '%')
 		{
-			if (format[idx + 1] != 's' && format[idx + 1] != 'c')
+			if (format[idx + 1] != 's' && format[idx + 1] != 'c'
+				&& format[idx + 1] != 'd' && format[idx + 1] != 'i')
 			{
 				_putchar(format[idx]);
 				counter++;

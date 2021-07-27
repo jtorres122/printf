@@ -11,5 +11,6 @@ int _printf(const char *format, ...);
 int modifiers(char modifier, va_list list);
 int sprinter(char *str);
 int cprinter(char c);
+int int_printer(int i);
 
 #endif /* _HOLBERTON_H_ */
