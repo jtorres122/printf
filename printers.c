@@ -16,7 +16,7 @@ int modifiers(char modifier, va_list list)
 			return (cprinter(va_arg(list, int)));
 		case 'd':
 		case 'i':
-			return (int_printer(va_arg(list, int)));
+			return (int_printer(va_arg(list, int), 0));
 	}
 
 	return (0);
@@ -57,16 +57,15 @@ int cprinter(char c)
  * @i: parameter
  * Return: 0
  */
-int int_printer(int i)
+int int_printer(int i, int counter)
 {
 	unsigned int n = 0;
-	int counter = 0;
 
 	if (i < 0)
 	{
 		_putchar('-');
-		n = (i * -1);
 		counter++;
+		n = (i * -1);
 	}
 	else
 	{
@@ -74,7 +73,7 @@ int int_printer(int i)
 	}
 
 	if (n / 10 != 0)
-		int_printer(n / 10);
+		counter = int_printer(n / 10, counter);
 
 	_putchar(n % 10 + '0');
 	counter++;
